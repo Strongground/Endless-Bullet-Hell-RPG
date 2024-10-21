@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/textures/effects/smoke2/spritesheet.png" type="Texture" id=1]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.0763547, 0.344043 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.544276, 0.75378, 1 )
+colors = PoolColorArray( 0.560784, 0.560784, 0.560784, 0, 0.590908, 0.590908, 0.590908, 1, 0.591082, 0.591082, 0.591082, 0.860335, 0.592157, 0.592157, 0.592157, 0 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource( 1 )
+z_index = 99
+amount = 20
+lifetime = 8.0
+texture = ExtResource( 1 )
+spread = 8.79
+gravity = Vector2( 1, 0 )
+initial_velocity = 2.0
+linear_accel = 40.0
+angle = 180.0
+angle_random = 1.0
+scale_amount = 1.2
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 2 )
+color_ramp = SubResource( 3 )
+anim_offset = 1.0
+anim_offset_random = 1.0

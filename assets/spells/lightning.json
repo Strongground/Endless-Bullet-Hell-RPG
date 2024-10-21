@@ -1,0 +1,7 @@
+{
+    "name": "fireball",
+    "element": "fire",
+    "damage": 10,
+    "projectile_graphic": "Arcane_Effect_7.png",
+    "cast_sound": "fireball_cast.wav"
+}

@@ -1,0 +1,127 @@
+{
+    "TEMPERATE": [
+        {
+            "name": "light_forest",
+            "likeliness": 0.35,
+            "ambient_sound": "res://sounds/ambient/forest.wav",
+            "monsters": ["FOREST_GOBLIN"],
+            "ground_texture": ["grass_mix_ylw_d", "grass_autumn_red_d"],
+            "clutter_types": {
+                "trees": {
+                    "sprites": [
+                        "foliage/tree1.png",
+                        "foliage/tree2.png",
+                        "foliage/tree3.png",
+                        "foliage/tree4.png",
+                        "foliage/tree5.png",
+                        "foliage/tree6.png",
+                        "foliage/tree7.png",
+                        "foliage/tree8.png",
+                        "foliage/tree9.png"
+                    ],
+                    "min": 7,
+                    "max": 14,
+                    "z-index": 99
+                },
+                "shrubs": {
+                    "sprites": [
+                        "foliage/foliage1.png",
+                        "foliage/foliage2.png",
+                        "foliage/foliage3.png",
+                        "foliage/foliage4.png",
+                        "foliage/foliage5.png",
+                        "foliage/foliage6.png",
+                        "foliage/foliage7.png",
+                        "foliage/foliage8.png",
+                        "foliage/foliage9.png"
+                    ],
+                    "min": 5,
+                    "max": 10,
+                    "z-index": 5
+                }
+            }
+        },
+        {
+            "name": "dense_forest",
+            "likeliness": 0.25,
+            "ambient_sound": "res://sounds/ambient/forest.wav",
+            "monsters": ["FOREST_GOBLIN"],
+            "ground_texture": ["grass_ground2y_d"],
+            "clutter_types": {
+                "trees": {
+                    "sprites": [
+                        "foliage/tree1.png",
+                        "foliage/tree2.png",
+                        "foliage/tree3.png",
+                        "foliage/tree4.png",
+                        "foliage/tree5.png",
+                        "foliage/tree6.png",
+                        "foliage/tree7.png",
+                        "foliage/tree8.png",
+                        "foliage/tree9.png"
+                    ],
+                    "min": 20,
+                    "max": 35,
+                    "z-index": 99
+                },
+                "shrubs": {
+                    "sprites": [
+                        "foliage/foliage1.png",
+                        "foliage/foliage2.png",
+                        "foliage/foliage3.png",
+                        "foliage/foliage4.png",
+                        "foliage/foliage5.png",
+                        "foliage/foliage6.png",
+                        "foliage/foliage7.png",
+                        "foliage/foliage8.png",
+                        "foliage/foliage9.png"
+                    ],
+                    "min": 15,
+                    "max": 25,
+                    "z-index": 5
+                }
+            }
+        },
+        {
+            "name": "grassland",
+            "likeliness": 0.4,
+            "ambient_sound": "res://sounds/ambient/grassland.wav",
+            "monsters": ["BANDIT_ARCHER", "BANDIT_WARRIOR"],
+            "ground_texture": ["grass_green2y_d"],
+            "clutter_types": {
+                "trees": {
+                    "sprites": [
+                        "foliage/tree1.png",
+                        "foliage/tree2.png",
+                        "foliage/tree3.png",
+                        "foliage/tree4.png",
+                        "foliage/tree5.png",
+                        "foliage/tree6.png",
+                        "foliage/tree7.png",
+                        "foliage/tree8.png",
+                        "foliage/tree9.png"
+                    ],
+                    "min": 1,
+                    "max": 3,
+                    "z-index": 99
+                },
+                "shrubs": {
+                    "sprites": [
+                        "foliage/foliage1.png",
+                        "foliage/foliage2.png",
+                        "foliage/foliage3.png",
+                        "foliage/foliage4.png",
+                        "foliage/foliage5.png",
+                        "foliage/foliage6.png",
+                        "foliage/foliage7.png",
+                        "foliage/foliage8.png",
+                        "foliage/foliage9.png"
+                    ],
+                    "min": 1,
+                    "max": 3,
+                    "z-index": 5
+                }
+            }
+        }
+    ]
+}

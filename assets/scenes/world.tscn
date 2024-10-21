@@ -1,0 +1,241 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/scenes/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/scenes/chunk.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/scenes/monsterManager.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/scenes/chunkManager.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/scenes/camera.gd" type="Script" id=5]
+[ext_resource path="res://assets/scenes/world.gd" type="Script" id=6]
+[ext_resource path="res://assets/textures/terrain/components/buildings/spawn_altar.png" type="Texture" id=7]
+[ext_resource path="res://assets/scenes/lightSource.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/fonts/standard_16_outline.tres" type="DynamicFont" id=9]
+[ext_resource path="res://assets/scenes/spellManager.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/scenes/loot.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/ornate-theme/ornate-theme.tres" type="Theme" id=12]
+
+[node name="world" type="Node2D"]
+position = Vector2( 1, 0 )
+script = ExtResource( 6 )
+
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2( -23.6031, 26.3935 )
+z_index = 99
+current = true
+zoom = Vector2( 0.5, 0.5 )
+process_mode = 0
+smoothing_enabled = true
+smoothing_speed = 10.0
+editor_draw_limits = true
+script = ExtResource( 5 )
+
+[node name="gui" type="Control" parent="camera"]
+margin_right = 40.0
+margin_bottom = 40.0
+theme = ExtResource( 12 )
+
+[node name="gold_label" type="RichTextLabel" parent="camera/gui"]
+margin_left = -453.0
+margin_top = -239.0
+margin_right = -402.0
+margin_bottom = -222.0
+rect_pivot_offset = Vector2( 136.404, 51.5022 )
+custom_fonts/normal_font = ExtResource( 9 )
+text = "Gold:"
+scroll_active = false
+
+[node name="gold_value" type="RichTextLabel" parent="camera/gui"]
+margin_left = -397.033
+margin_top = -239.138
+margin_right = -321.033
+margin_bottom = -222.138
+rect_pivot_offset = Vector2( 136.404, 51.5022 )
+custom_fonts/normal_font = ExtResource( 9 )
+text = "GoldValue"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="health_label" type="RichTextLabel" parent="camera/gui"]
+margin_left = -453.0
+margin_top = -255.0
+margin_right = -402.0
+margin_bottom = -238.0
+rect_pivot_offset = Vector2( 136.404, 51.5022 )
+custom_fonts/normal_font = ExtResource( 9 )
+text = "Health:"
+scroll_active = false
+
+[node name="health_value" type="RichTextLabel" parent="camera/gui"]
+margin_left = -397.397
+margin_top = -255.259
+margin_right = -321.397
+margin_bottom = -238.259
+rect_pivot_offset = Vector2( 32.0001, 6.86551 )
+custom_fonts/normal_font = ExtResource( 9 )
+text = "HealthValue"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exp_label" type="RichTextLabel" parent="camera/gui"]
+margin_left = -453.0
+margin_top = -223.0
+margin_right = -402.0
+margin_bottom = -206.0
+rect_pivot_offset = Vector2( 21.6031, 7.60651 )
+custom_fonts/normal_font = ExtResource( 9 )
+text = "EXP:"
+scroll_active = false
+
+[node name="exp_value" type="RichTextLabel" parent="camera/gui"]
+margin_left = -397.154
+margin_top = -223.259
+margin_right = -321.154
+margin_bottom = -206.259
+rect_pivot_offset = Vector2( 136.404, 51.5022 )
+custom_fonts/normal_font = ExtResource( 9 )
+text = "ExperienceValue"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="level_label" type="RichTextLabel" parent="camera/gui"]
+margin_left = -453.0
+margin_top = -207.0
+margin_right = -402.0
+margin_bottom = -190.0
+rect_pivot_offset = Vector2( 136.404, 51.5022 )
+custom_fonts/normal_font = ExtResource( 9 )
+text = "Level:"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="level_value" type="RichTextLabel" parent="camera/gui"]
+margin_left = -397.154
+margin_top = -207.259
+margin_right = -321.154
+margin_bottom = -190.259
+rect_pivot_offset = Vector2( 136.404, 51.5022 )
+custom_fonts/normal_font = ExtResource( 9 )
+text = "LevelValue"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="print_vis-rect_button" type="Button" parent="camera/gui"]
+visible = false
+margin_left = -115.773
+margin_top = 250.303
+margin_right = 237.227
+margin_bottom = 287.303
+text = "DEBUG: Print Visible Rectangle"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="playerpos_label" type="RichTextLabel" parent="camera/gui"]
+visible = false
+margin_left = -139.298
+margin_top = 228.345
+margin_right = -88.2984
+margin_bottom = 245.345
+rect_pivot_offset = Vector2( 25.0591, 8.00568 )
+text = "Pos:"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="playerpos_value" type="RichTextLabel" parent="camera/gui"]
+visible = false
+margin_left = -96.9729
+margin_top = 228.212
+margin_right = 103.027
+margin_bottom = 245.212
+rect_pivot_offset = Vector2( 136.404, 51.5022 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="merchant_popup" type="WindowDialog" parent="camera/gui"]
+margin_left = -200.0
+margin_top = -100.0
+margin_right = 227.0
+margin_bottom = 91.0
+theme = ExtResource( 12 )
+window_title = " Merchant"
+
+[node name="MarginContainer" type="MarginContainer" parent="camera/gui/merchant_popup"]
+anchor_right = 1.0
+margin_bottom = 43.0
+
+[node name="ItemList" type="ItemList" parent="camera/gui/merchant_popup/MarginContainer"]
+margin_right = 427.0
+margin_bottom = 43.0
+size_flags_vertical = 3
+items = [ "Item", null, false, "Another Item", null, false, "Third Item", null, false ]
+auto_height = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="camera/gui/merchant_popup"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -35.0
+
+[node name="Button" type="Button" parent="camera/gui/merchant_popup/MarginContainer2"]
+margin_right = 427.0
+margin_bottom = 35.0
+text = "Purchase"
+
+[node name="5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="spawn_altar" type="Sprite" parent="5"]
+position = Vector2( -22.9399, 38.0724 )
+rotation = -0.11148
+scale = Vector2( 0.701689, 0.701689 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lightSource" parent="5" instance=ExtResource( 8 )]
+position = Vector2( 226.274, -297.692 )
+type = "magic"
+
+[node name="lightSource3" parent="5" instance=ExtResource( 8 )]
+position = Vector2( 285.671, 268.559 )
+type = "magic"
+
+[node name="lightSource4" parent="5" instance=ExtResource( 8 )]
+position = Vector2( -276.479, 347.189 )
+type = "magic"
+
+[node name="lightSource2" parent="5" instance=ExtResource( 8 )]
+position = Vector2( -342.947, -242.255 )
+type = "magic"
+
+[node name="StarterLoot" parent="5" instance=ExtResource( 11 )]
+position = Vector2( 374, -184 )
+drop_type = "potion"
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -17.7856, 35.0565 )
+
+[node name="monsterManager" parent="." instance=ExtResource( 3 )]
+
+[node name="chunkManager" parent="." instance=ExtResource( 4 )]
+
+[node name="spellManager" parent="." instance=ExtResource( 10 )]
+position = Vector2( -3, -35 )
+
+[connection signal="pressed" from="camera/gui/print_vis-rect_button" to="camera" method="_on_print_visrect_button_pressed"]

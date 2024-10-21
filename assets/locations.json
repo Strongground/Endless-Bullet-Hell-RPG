@@ -1,0 +1,23 @@
+{
+    "unique_locations": [
+        {
+            "location": "spawn_altar",
+            "coordinates": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    ],
+    "random_locations": [
+        {
+            "name": "ambushed_cart_1",
+            "biomes": ["TEMPERATE"],
+            "chance": 0.025
+        },
+        {
+            "name": "merchant_stall",
+            "biomes": ["TEMPERATE"],
+            "chance": 0.03
+        }
+    ]
+}

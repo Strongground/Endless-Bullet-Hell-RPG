@@ -1,0 +1,15 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "Health Potion",
+            "effects": [
+                {
+                    "type": "consumable",
+                    "effect": "heal_player_once",
+                    "amount": 30
+                }
+            ]
+        }
+    ]
+}
